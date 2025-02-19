@@ -13248,12 +13248,6 @@ a.read_more i {
   transition: all 0.4s ease-in-out;
 }
 
-.custom__prev-btn {
-}
-
-.custom__next-btn {
-}
-
 .custom__prev-btn:hover,
 .custom__next-btn:hover {
   transform: scale(1.1);
