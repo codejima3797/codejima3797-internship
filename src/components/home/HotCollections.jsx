@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../css/styles/slick-arrows.css";
 
 const HotCollections = () => {
-  const [users, setUsers] = useState([]);
+  const [colls, setColls] = useState([]);
   const [loading, setLoading] = useState(true);
   const sliderRef = useRef(null);
 
@@ -23,7 +23,7 @@ const HotCollections = () => {
       const { data } = await axios.get(
         "https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections"
       );
-      setUsers(data);
+      setColls(data);
       setLoading(false);
     }, 1000);
   }
@@ -87,33 +87,33 @@ const HotCollections = () => {
                 </div>
               </div>
             ))
-          : users.map((user) => (
-              <div key={user.id} className="nft_coll--wrapper">
+          : colls.map((coll) => (
+              <div key={coll.id} className="nft_coll--wrapper">
                 <div className="nft_coll">
                   <div className="nft_wrap">
-                    <Link to={`/item-details/${user.id}`}>
+                    <Link to={`/item-details/${coll.id}`}>
                       <img
-                        src={user.nftImage}
+                        src={coll.nftImage}
                         className="lazy img-fluid"
                         alt=""
                       />
                     </Link>
                   </div>
                   <div className="nft_coll_pp">
-                    <Link to={`/author/${user.authorId}`}>
+                    <Link to={`/author/${coll.authorId}`}>
                       <img
                         className="lazy pp-coll"
-                        src={user.authorImage}
+                        src={coll.authorImage}
                         alt=""
                       />
                     </Link>
                     <i className="fa fa-check"></i>
                   </div>
                   <div className="nft_coll_info">
-                    <Link to={`/item-details/${user.id}`}>
-                      <h4>{user.title}</h4>
+                    <Link to={`/item-details/${coll.id}`}>
+                      <h4>{coll.title}</h4>
                     </Link>
-                    <span>ERC-{user.code}</span>
+                    <span>ERC-{coll.code}</span>
                   </div>
                 </div>
               </div>
