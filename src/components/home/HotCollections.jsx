@@ -136,8 +136,8 @@ const HotCollections = () => {
             {MultipleItems()}
             {loading ? (
               <>
-                <Skeleton width={40} height={40} circle />
-                <Skeleton width={40} height={40} circle />
+                <Skeleton className="slick-prev" width={40} height={40} circle />
+                <Skeleton className="slick-next" width={40} height={40} circle />
               </>
             ) : (
               <>
