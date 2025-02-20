@@ -1,14 +1,13 @@
 .slick-prev,
 .slick-next
 {
-    display: flex !important;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     line-height: 0;
     position: absolute;
     top: 50%;
-    display: block;
     width: 32px;
     height: 32px;
     border: 1px solid #dddddd;
