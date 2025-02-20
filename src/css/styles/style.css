@@ -13173,6 +13173,7 @@ a.read_more i {
 }
 
 .img-fluid {
+  width: 100%;
   height: 100%;
 }
 
