@@ -6,7 +6,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../css/styles/style.css";
+import "../../css/styles/slick-arrows.css";
 
 const HotCollections = () => {
   const [users, setUsers] = useState([]);
@@ -77,7 +77,7 @@ const HotCollections = () => {
                         className="lazy check-mark"
                         height={20}
                         width={20}
-                       />
+                      />
                     </div>
                     <div className="nft_coll_info">
                       <Skeleton height={20} width={100} />
@@ -141,18 +141,22 @@ const HotCollections = () => {
               </div>
             ) : (
               <div className="prev-next__btn--wrapper">
-                <button
-                  className="custom__prev-btn"
-                  onClick={() => sliderRef.current.slickPrev()}
-                >
-                  <i className="fa fa-chevron-left"></i>
-                </button>
-                <button
-                  className="custom__next-btn"
-                  onClick={() => sliderRef.current.slickNext()}
-                >
-                  <i className="fa fa-chevron-right"></i>
-                </button>
+                <div className="prev__btn--wrapper">
+                  <button
+                    className="slick-prev"
+                    onClick={() => sliderRef.current.slickPrev()}
+                  >
+                    <i className="fa fa-chevron-left"></i>
+                  </button>
+                </div>
+                <div className="next__btn--wrapper">
+                  <button
+                    className="slick-next"
+                    onClick={() => sliderRef.current.slickNext()}
+                  >
+                    <i className="fa fa-chevron-right"></i>
+                  </button>
+                </div>
               </div>
             )}
           </div>
