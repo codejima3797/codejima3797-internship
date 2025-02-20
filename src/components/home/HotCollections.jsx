@@ -135,29 +135,25 @@ const HotCollections = () => {
           <div className="slider-container">
             {MultipleItems()}
             {loading ? (
-              <div className="prev-next__btn--wrapper">
+              <>
                 <Skeleton width={40} height={40} circle />
                 <Skeleton width={40} height={40} circle />
-              </div>
+              </>
             ) : (
-              <div className="prev-next__btn--wrapper">
-                <div className="prev__btn--wrapper">
+              <>
                   <button
                     className="slick-prev"
                     onClick={() => sliderRef.current.slickPrev()}
                   >
                     <i className="fa fa-chevron-left"></i>
                   </button>
-                </div>
-                <div className="next__btn--wrapper">
                   <button
                     className="slick-next"
                     onClick={() => sliderRef.current.slickNext()}
                   >
                     <i className="fa fa-chevron-right"></i>
                   </button>
-                </div>
-              </div>
+              </>
             )}
           </div>
         </div>
