@@ -13172,6 +13172,22 @@ a.read_more i {
   height: auto;
 }
 
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-container {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.nft_coll--wrapper {
+  padding: 0 8px;
+}
+
 .nft_coll {
   background: #ffffff;
   padding-bottom: 10px;
