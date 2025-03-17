@@ -13636,8 +13636,13 @@ a.read_more i {
   padding-left: 70px;
 }
 
+.nft__item--wrapper {
+  padding: 0 8px;
+}
+
 .nft__item {
   position: relative;
+  max-height: 400px;
   padding: 20px;
   border: solid 1px #ddd;
   border-radius: 15px;
@@ -13673,8 +13678,17 @@ a.read_more i {
   box-shadow: 2px 2px 30px 0px rgba(20, 20, 20, 0.1);
 }
 
+.nft__item_preview {
+  border-radius: 8px;
+}
+
 .nft__item:hover img.nft__item_preview {
-  transform: scale(1.03);
+  transform: scale(1.02);
+}
+
+.nft__item--author-img {
+  position: relative;
+  right: 4px;
 }
 
 .nft__item_wrap {
@@ -13684,7 +13698,7 @@ a.read_more i {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 350px;
+  height: 330px;
 }
 
 .nft__item_wrap a {
@@ -13694,10 +13708,7 @@ a.read_more i {
 
 .nft__item img {
   width: 100%;
-  height: auto !important;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  max-height: 300px;
 }
 
 .nft__item .author_list_pp {
@@ -13712,6 +13723,7 @@ a.read_more i {
 
 .nft__item_info {
   position: relative;
+  bottom: 8px;
 }
 
 .nft__item_info a {
@@ -14156,15 +14168,19 @@ a.read_more i {
 
 .de_countdown {
   position: absolute;
+  top: 12px;
   right: 20px;
   background: #ffffff;
   padding: 1px 10px;
+  z-index: 100;
+  color: #0d0c22;
+}
+
+.de_countdown.active {
+  border: 2px solid #8364E2;
   border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
-  border: solid 2px #dddddd;
-  z-index: 100;
-  color: #0d0c22;
 }
 
 .de_countdown.bg-color-secondary {
