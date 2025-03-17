@@ -112,14 +112,6 @@ const NewItems = () => {
                     <Skeleton className="lazy" height={50} borderRadius={50} />
                   </div>
                   <div className="nft__item_wrap">
-                    <div className="nft__item_extra">
-                      <div className="nft__item_buttons">
-                        <button>Buy Now</button>
-                        <div className="nft__item_share">
-                          <Skeleton />
-                        </div>
-                      </div>
-                    </div>
 
                     <Skeleton
                       className="lazy nft__item img"
