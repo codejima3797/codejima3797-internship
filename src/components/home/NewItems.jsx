@@ -127,39 +127,39 @@ const NewItems = () => {
                 </div>
               </div>
             ))
-          : items.map((item) => (
-              <div key={item.id} className="nft__item--wrapper">
+          : items.map(({ id, authorId, authorImage, expiryDate, nftImage, title, price, likes }) => (
+              <div key={id} className="nft__item--wrapper">
                 <div className="nft__item">
                   <div className="author_list_pp">
-                    <Link to={`/author/${item.authorId}`}>
+                    <Link to={`/author/${authorId}`}>
                       <img
                         className="lazy nft__item--author-img"
-                        src={item.authorImage}
+                        src={authorImage}
                         alt=""
                       />
                       <i className="fa fa-check"></i>
                     </Link>
                   </div>
 
-                  <Countdown timestamp={item.expiryDate} />
+                  <Countdown timestamp={expiryDate} />
 
                   <div className="nft__item_wrap">
-                    <Link to={`/item-details/${item.id}`}>
+                    <Link to={`/item-details/${id}`}>
                       <img
-                        src={item.nftImage}
+                        src={nftImage}
                         className="lazy nft__item_preview"
                         alt=""
                       />
                     </Link>
                   </div>
                   <div className="nft__item_info">
-                    <Link to={`/item-details/${item.id}`}>
-                      <h4>{item.title}</h4>
+                    <Link to={`/item-details/${id}`}>
+                      <h4>{title}</h4>
                     </Link>
-                    <div className="nft__item_price">{item.price}</div>
+                    <div className="nft__item_price">{price}</div>
                     <div className="nft__item_like">
                       <i className="fa fa-heart"></i>
-                      <span>{item.likes}</span>
+                      <span>{likes}</span>
                     </div>
                   </div>
                 </div>
