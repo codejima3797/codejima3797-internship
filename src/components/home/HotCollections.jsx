@@ -87,33 +87,33 @@ const HotCollections = () => {
                 </div>
               </div>
             ))
-          : colls.map((coll) => (
-              <div key={coll.id} className="nft_coll--wrapper">
+          : colls.map(({ id, nftImage, authorId, authorImage, title, code }) => (
+              <div key={id} className="nft_coll--wrapper">
                 <div className="nft_coll">
                   <div className="nft_wrap">
-                    <Link to={`/item-details/${coll.id}`}>
+                    <Link to={`/item-details/${id}`}>
                       <img
-                        src={coll.nftImage}
+                        src={nftImage}
                         className="lazy img-fluid"
                         alt=""
                       />
                     </Link>
                   </div>
                   <div className="nft_coll_pp">
-                    <Link to={`/author/${coll.authorId}`}>
+                    <Link to={`/author/${authorId}`}>
                       <img
                         className="lazy pp-coll"
-                        src={coll.authorImage}
+                        src={authorImage}
                         alt=""
                       />
                     </Link>
                     <i className="fa fa-check"></i>
                   </div>
                   <div className="nft_coll_info">
-                    <Link to={`/item-details/${coll.id}`}>
-                      <h4>{coll.title}</h4>
+                    <Link to={`/item-details/${id}`}>
+                      <h4>{title}</h4>
                     </Link>
-                    <span>ERC-{coll.code}</span>
+                    <span>ERC-{code}</span>
                   </div>
                 </div>
               </div>
