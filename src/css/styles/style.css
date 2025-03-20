@@ -13682,6 +13682,11 @@ a.read_more i {
   border-radius: 8px;
 }
 
+.lazy.nft__item_preview.explore__nft--img {
+  max-height: 272px;
+  max-width: 260px;
+}
+
 .nft__item:hover img.nft__item_preview {
   transform: scale(1.02);
 }
