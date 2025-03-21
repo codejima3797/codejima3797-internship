@@ -13682,6 +13682,11 @@ a.read_more i {
   border-radius: 8px;
 }
 
+.lazy.nft__item_preview.explore__nft--img {
+  max-height: 272px;
+  max-width: 260px;
+}
+
 .nft__item:hover img.nft__item_preview {
   transform: scale(1.02);
 }
@@ -16532,6 +16537,31 @@ img {
 
   .nft__item_lg .de_countdown {
     padding-top: 0;
+  }
+
+  .d_profile,
+  .profile_avatar,
+  #wallet,
+  #btn_copy,
+  .profile_follow,
+  .profile_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #btn_copy {
+    position: relative;
+  }
+
+  .profile_header {
+    margin: 0;
+  }
+
+  .profile_follower {
+    margin: 0;
+    text-align: center;
   }
 
   #items-carousel-big .owl-prev,
