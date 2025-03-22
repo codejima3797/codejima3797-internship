@@ -7609,6 +7609,15 @@ a.btn-right {
 }
 
 @media all and (max-width: 768px) {
+
+  .item_title {
+    text-align: center;
+  }
+
+  .item_info_counts {
+    justify-content: center;
+  }
+
   .all-timelines::before {
     right: unset;
     top: 0;
