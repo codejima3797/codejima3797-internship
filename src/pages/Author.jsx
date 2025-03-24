@@ -54,7 +54,9 @@ const Author = () => {
       </section>
       <section style={isLoading ? { padding: 0 } : {}}>
         <div className="container">
-          <div className="row">
+          <div
+            className="row"
+          >
             <div className="d_profile de-flex">
               <ProfileHeader
                 image={authorData?.authorImage}
@@ -90,8 +92,7 @@ const Author = () => {
     </div>
   );
 
-  return renderAuthor (loading);
+  return renderAuthor(loading);
 };
 
 export default Author;
-

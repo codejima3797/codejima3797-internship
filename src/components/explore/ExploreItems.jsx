@@ -29,9 +29,9 @@ const ExploreItems = () => {
   const handleFilterChange = async (e) => {
     const value = e.target.value;
     setFilter(value);
-    setFilterLoading(true)
+    setFilterLoading(true);
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     if (value === "price_low_to_high") {
       exItems.sort((a, b) => a.price - b.price);
@@ -41,8 +41,8 @@ const ExploreItems = () => {
       exItems.sort((a, b) => b.likes - a.likes);
     }
 
-    setExItems(exItems)
-    setFilterLoading(false)
+    setExItems(exItems);
+    setFilterLoading(false);
   };
 
   const handleLoadMore = () => {
@@ -54,7 +54,12 @@ const ExploreItems = () => {
   return (
     <>
       <div>
-        <select id="filter-items" value={filter} onChange={handleFilterChange} disabled={loading || filterLoading}>
+        <select
+          id="filter-items"
+          value={filter}
+          onChange={handleFilterChange}
+          disabled={loading || filterLoading}
+        >
           <option value="">Default</option>
           <option value="price_low_to_high">Price, Low to High</option>
           <option value="price_high_to_low">Price, High to Low</option>
@@ -62,7 +67,7 @@ const ExploreItems = () => {
         </select>
       </div>
 
-      {(loading || filterLoading) ? (
+      {loading || filterLoading ? (
         <SkeletonExplore />
       ) : (
         exItems
@@ -83,6 +88,10 @@ const ExploreItems = () => {
                 key={id}
                 className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
                 style={{ display: "block", backgroundSize: "cover" }}
+                data-aos="fade-in"
+                data-aos-delay="50"
+                data-aos-easing="ease"
+                data-aos-duration="1000"
               >
                 <div className="nft__item">
                   <div className="author_list_pp">
