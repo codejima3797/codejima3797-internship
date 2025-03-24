@@ -87,37 +87,35 @@ const HotCollections = () => {
                 </div>
               </div>
             ))
-          : colls.map(({ id, nftImage, authorId, authorImage, title, code }) => (
-              <div key={id} className="nft_coll--wrapper">
-                <div className="nft_coll">
-                  <div className="nft_wrap">
-                    <Link to={`/item-details/${id}`}>
-                      <img
-                        src={nftImage}
-                        className="lazy img-fluid"
-                        alt=""
-                      />
-                    </Link>
-                  </div>
-                  <div className="nft_coll_pp">
-                    <Link to={`/author/${authorId}`}>
-                      <img
-                        className="lazy pp-coll"
-                        src={authorImage}
-                        alt=""
-                      />
-                    </Link>
-                    <i className="fa fa-check"></i>
-                  </div>
-                  <div className="nft_coll_info">
-                    <Link to={`/item-details/${id}`}>
-                      <h4>{title}</h4>
-                    </Link>
-                    <span>ERC-{code}</span>
+          : colls.map(
+              ({ id, nftImage, authorId, authorImage, title, code }) => (
+                <div key={id} className="nft_coll--wrapper">
+                  <div className="nft_coll">
+                    <div className="nft_wrap">
+                      <Link to={`/item-details/${id}`}>
+                        <img src={nftImage} className="lazy img-fluid" alt="" />
+                      </Link>
+                    </div>
+                    <div className="nft_coll_pp">
+                      <Link to={`/author/${authorId}`}>
+                        <img
+                          className="lazy pp-coll"
+                          src={authorImage}
+                          alt=""
+                        />
+                      </Link>
+                      <i className="fa fa-check"></i>
+                    </div>
+                    <div className="nft_coll_info">
+                      <Link to={`/item-details/${id}`}>
+                        <h4>{title}</h4>
+                      </Link>
+                      <span>ERC-{code}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            )}
       </Slider>
     );
   }
@@ -125,7 +123,13 @@ const HotCollections = () => {
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
-        <div className="row">
+        <div
+          className="row"
+          data-aos="fade-in"
+          data-aos-delay="50"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <div className="col-lg-12">
             <div className="text-center">
               <h2>Hot Collections</h2>
@@ -136,23 +140,33 @@ const HotCollections = () => {
             {MultipleItems()}
             {loading ? (
               <>
-                <Skeleton className="slick-prev" width={40} height={40} circle />
-                <Skeleton className="slick-next" width={40} height={40} circle />
+                <Skeleton
+                  className="slick-prev"
+                  width={40}
+                  height={40}
+                  circle
+                />
+                <Skeleton
+                  className="slick-next"
+                  width={40}
+                  height={40}
+                  circle
+                />
               </>
             ) : (
               <>
-                  <button
-                    className="slick-prev"
-                    onClick={() => sliderRef.current.slickPrev()}
-                  >
-                    <i className="fa fa-chevron-left"></i>
-                  </button>
-                  <button
-                    className="slick-next"
-                    onClick={() => sliderRef.current.slickNext()}
-                  >
-                    <i className="fa fa-chevron-right"></i>
-                  </button>
+                <button
+                  className="slick-prev"
+                  onClick={() => sliderRef.current.slickPrev()}
+                >
+                  <i className="fa fa-chevron-left"></i>
+                </button>
+                <button
+                  className="slick-next"
+                  onClick={() => sliderRef.current.slickNext()}
+                >
+                  <i className="fa fa-chevron-right"></i>
+                </button>
               </>
             )}
           </div>
